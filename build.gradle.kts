@@ -40,7 +40,8 @@ gradle.taskGraph.afterTask {
 
 plugins {
     kotlin("jvm") version "1.6.20"
-    application
+//    application
+    id("application")
 }
 
 group = "org.example"
