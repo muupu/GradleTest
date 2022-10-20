@@ -136,3 +136,16 @@ tasks.register("other") {
     }
 }
 
+class GreetingPlugin : Plugin<Project> {
+    override fun apply(target: Project) {
+//        project.task("helloworld") {
+        target.task("greeting_plugin") {
+            doLast {
+                println("Hello from the GreetingPlugin")
+            }
+        }
+    }
+}
+
+// Apply the plugin
+apply<GreetingPlugin>()
